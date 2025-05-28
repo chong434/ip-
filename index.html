@@ -287,7 +287,172 @@
             animation-delay: 8s;
         }
 
-        /* ========== 页面切换 ========== */
+        /* ========== 主页样式 ========== */
+        .home-hero {
+            text-align: center;
+            padding: 80px 0 60px;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        .home-hero h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 16px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .home-hero p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 40px;
+        }
+
+        .home-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .start-btn {
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(59, 130, 246, 0.9);
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            min-width: 160px;
+        }
+
+        .start-btn:hover {
+            background: rgba(59, 130, 246, 1);
+            transform: translateY(-1px);
+        }
+
+        .settings-link {
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.4);
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 16px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            min-width: 160px;
+        }
+
+        .settings-link:hover {
+            background: rgba(0, 0, 0, 0.6);
+            transform: translateY(-1px);
+        }
+
+        .home-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+
+        .feature-text {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 32px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 20px;
+        }
+
+        .feature-text h2 {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: 600;
+            text-shadow: 
+                0 2px 4px rgba(0, 0, 0, 0.8),
+                0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .feature-text p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            font-weight: 300;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .feature-list li {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            padding: 8px 0;
+            position: relative;
+            padding-left: 24px;
+            font-weight: 400;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: rgba(59, 130, 246, 0.8);
+            font-weight: bold;
+        }
+
+        .feature-visual {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 300px;
+        }
+
+        .visual-placeholder {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin: 20px;
+        }
+
+        .visual-placeholder h3 {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 12px;
+            font-weight: 600;
+            text-shadow: 
+                0 2px 4px rgba(0, 0, 0, 0.8),
+                0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .visual-placeholder p {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+        }
         .page {
             display: none;
         }
@@ -313,6 +478,33 @@
             margin-bottom: 30px;
             animation: slideDown 0.8s ease-out;
             position: relative;
+        }
+
+        .header-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header-btn {
+            padding: 8px 16px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 6px;
+            color: rgba(255, 255, 255, 0.9);
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 300;
+            transition: all 0.2s ease;
+        }
+
+        .header-btn:hover {
+            background: rgba(0, 0, 0, 0.6);
+            transform: translateY(-1px);
         }
 
         .header h1 {
@@ -845,10 +1037,51 @@
             }
         }
 
+        /* ========== 页面切换 ========== */
+        
         /* ========== 响应式设计 ========== */
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
+            }
+            
+            .home-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .home-hero p {
+                font-size: 1rem;
+            }
+            
+            .home-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .start-btn, .settings-link {
+                width: 100%;
+                max-width: 280px;
+            }
+            
+            .home-features {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            
+            .feature-text {
+                order: 2;
+                padding: 0;
+            }
+            
+            .feature-visual {
+                order: 1;
+                min-height: 200px;
+            }
+            
+            .visual-placeholder {
+                max-width: 300px;
+                padding: 30px 20px;
             }
             
             .header h1 {
@@ -926,13 +1159,49 @@
         <div class="vertical-line v-line-2"></div>
     </div>
 
-    <!-- ========== 主聊天页面 ========== -->
-    <div id="chatPage" class="page active">
+    <!-- ========== 主页 ========== -->
+    <div id="homePage" class="page active">
+        <div class="container">
+            <div class="home-hero">
+                <h1>IP账号定位</h1>
+                <p>AI大脑 帮助老板更快找到自己的账号定位</p>
+                <div class="home-actions">
+                    <button class="start-btn" onclick="showChat()">开始定位咨询</button>
+                    <button class="settings-link" onclick="showSettings()">配置设置</button>
+                </div>
+            </div>
+            
+            <div class="home-features">
+                <div class="feature-text">
+                    <h2>IP账号定位</h2>
+                    <p>通过AI智能分析和专业问答流程，为您量身定制最适合的IP账号发展策略。从人设定位到内容规划，从平台选择到运营建议，一站式解决您的账号定位需求。</p>
+                    <ul class="feature-list">
+                        <li>8个专业维度深度分析</li>
+                        <li>基于行业数据的智能建议</li>
+                        <li>完整的IP发展路径规划</li>
+                        <li>个性化的内容策略方案</li>
+                    </ul>
+                </div>
+                <div class="feature-visual">
+                    <div class="visual-placeholder">
+                        <h3>AI智能分析</h3>
+                        <p>精准定位 · 专业建议 · 全面策略</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== 聊天页面 ========== -->
+    <div id="chatPage" class="page">
         <div class="container">
             <div class="header">
                 <h1>IP账号定位</h1>
                 <p>AI大脑 帮助老板更快找到自己的账号定位</p>
-                <button class="settings-btn" onclick="showSettings()">⚙️ 设置</button>
+                <div class="header-actions">
+                    <button class="header-btn" onclick="showHome()">← 返回主页</button>
+                    <button class="settings-btn" onclick="showSettings()">⚙️ 设置</button>
+                </div>
             </div>
 
             <div class="chat-container">
@@ -971,7 +1240,7 @@
             </div>
 
             <div class="settings-container">
-                <button class="back-btn" onclick="showChat()">← 返回聊天</button>
+                <button class="back-btn" onclick="showHome()">← 返回主页</button>
 
                 <div class="api-config">
                     <h3 style="color: #93c5fd; margin-bottom: 20px; font-size: 18px;">🔧 API 配置</h3>
@@ -987,6 +1256,15 @@
                     <div class="config-row">
                         <label>用户 ID:</label>
                         <input type="text" id="userId" placeholder="请输入用户 ID" value="user123">
+                    </div>
+                    <div class="config-row">
+                        <label>Workflow ID:</label>
+                        <input type="text" id="workflowId" placeholder="请输入 Workflow ID (可选)">
+                    </div>
+                    <div class="config-row">
+                        <label>调试模式:</label>
+                        <input type="checkbox" id="debugMode" style="width: auto; margin-left: 10px;">
+                        <span style="margin-left: 5px; color: rgba(255, 255, 255, 0.7);">启用API调试信息</span>
                     </div>
 
                     <div style="margin-top: 20px;">
@@ -1007,8 +1285,14 @@
                     <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 10px;">
                         2. 获取 Bot ID：在 Coze 平台创建机器人后，可在机器人详情页面找到 ID
                     </p>
-                    <p style="color: #cbd5e1; line-height: 1.6;">
+                    <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 10px;">
                         3. 用户 ID：可自定义，用于标识不同的对话用户
+                    </p>
+                    <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 10px;">
+                        4. Workflow ID：如果您的Bot使用特定Workflow，请填写对应ID
+                    </p>
+                    <p style="color: #cbd5e1; line-height: 1.6;">
+                        5. 调试模式：启用后可在浏览器控制台查看详细的API调用信息
                     </p>
                 </div>
             </div>
@@ -1039,13 +1323,21 @@
         });
 
         // 页面切换功能
+        function showHome() {
+            document.getElementById('chatPage').classList.remove('active');
+            document.getElementById('settingsPage').classList.remove('active');
+            document.getElementById('homePage').classList.add('active');
+        }
+
         function showSettings() {
+            document.getElementById('homePage').classList.remove('active');
             document.getElementById('chatPage').classList.remove('active');
             document.getElementById('settingsPage').classList.add('active');
             loadConfig();
         }
 
         function showChat() {
+            document.getElementById('homePage').classList.remove('active');
             document.getElementById('settingsPage').classList.remove('active');
             document.getElementById('chatPage').classList.add('active');
             checkApiConfig();
@@ -1056,10 +1348,14 @@
             const savedApiKey = localStorage.getItem('coze_api_key');
             const savedBotId = localStorage.getItem('coze_bot_id');
             const savedUserId = localStorage.getItem('coze_user_id');
+            const savedWorkflowId = localStorage.getItem('coze_workflow_id');
+            const savedDebugMode = localStorage.getItem('coze_debug_mode') === 'true';
             
             if (savedApiKey) document.getElementById('apiKey').value = savedApiKey;
             if (savedBotId) document.getElementById('botId').value = savedBotId;
             if (savedUserId) document.getElementById('userId').value = savedUserId;
+            if (savedWorkflowId) document.getElementById('workflowId').value = savedWorkflowId;
+            document.getElementById('debugMode').checked = savedDebugMode;
 
             checkApiConfig();
         }
@@ -1069,6 +1365,8 @@
             const apiKey = document.getElementById('apiKey').value.trim();
             const botId = document.getElementById('botId').value.trim();
             const userId = document.getElementById('userId').value.trim() || 'user123';
+            const workflowId = document.getElementById('workflowId').value.trim();
+            const debugMode = document.getElementById('debugMode').checked;
 
             if (!apiKey || !botId) {
                 showError('请填写完整的API密钥和Bot ID');
@@ -1078,6 +1376,8 @@
             localStorage.setItem('coze_api_key', apiKey);
             localStorage.setItem('coze_bot_id', botId);
             localStorage.setItem('coze_user_id', userId);
+            localStorage.setItem('coze_workflow_id', workflowId);
+            localStorage.setItem('coze_debug_mode', debugMode.toString());
 
             showSuccessMessage('配置已保存！');
             checkApiConfig();
@@ -1219,25 +1519,40 @@
             const apiKey = localStorage.getItem('coze_api_key');
             const botId = localStorage.getItem('coze_bot_id');
             const userId = localStorage.getItem('coze_user_id') || 'user123';
+            const workflowId = localStorage.getItem('coze_workflow_id');
+            const debugMode = localStorage.getItem('coze_debug_mode') === 'true';
 
             if (!conversationId) {
                 conversationId = 'conv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
             }
 
             try {
+                const requestBody = {
+                    conversation_id: conversationId,
+                    bot_id: botId,
+                    user: userId,
+                    query: message,
+                    stream: false,
+                    auto_save_history: true,
+                    custom_variables: {}
+                };
+
+                // 如果有workflow_id，添加到请求中
+                if (workflowId) {
+                    requestBody.workflow_id = workflowId;
+                }
+
+                if (debugMode) {
+                    console.log('发送API请求:', JSON.stringify(requestBody, null, 2));
+                }
+
                 const response = await fetch('https://api.coze.com/open_api/v2/chat', {
                     method: 'POST',
                     headers: {
                         'Authorization': `Bearer ${apiKey}`,
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({
-                        conversation_id: conversationId,
-                        bot_id: botId,
-                        user: userId,
-                        query: message,
-                        stream: false
-                    })
+                    body: JSON.stringify(requestBody)
                 });
 
                 if (!response.ok) {
@@ -1247,18 +1562,38 @@
 
                 const data = await response.json();
                 
+                if (debugMode) {
+                    console.log('API响应:', JSON.stringify(data, null, 2));
+                }
+                
                 if (data.code !== 0) {
                     throw new Error(data.msg || 'API调用失败');
                 }
 
-                // 提取AI回复内容
+                // 更完善的消息处理逻辑
                 const messages = data.messages || [];
-                const aiMessage = messages.find(msg => msg.role === 'assistant' && msg.type === 'answer');
+                
+                // 优先查找answer类型的消息
+                let aiMessage = messages.find(msg => msg.role === 'assistant' && msg.type === 'answer');
+                
+                // 如果没有answer类型，查找其他assistant消息
+                if (!aiMessage) {
+                    aiMessage = messages.find(msg => msg.role === 'assistant' && msg.content);
+                }
+                
+                // 如果还是没有，查找最后一条有内容的消息
+                if (!aiMessage) {
+                    aiMessage = messages.reverse().find(msg => msg.content);
+                }
                 
                 if (aiMessage && aiMessage.content) {
                     return aiMessage.content;
                 } else {
-                    throw new Error('未收到有效的AI回复');
+                    // 如果启用调试模式，显示完整响应
+                    if (debugMode) {
+                        addMessage('assistant', `调试信息：\n${JSON.stringify(data, null, 2)}`);
+                    }
+                    throw new Error('未收到有效的AI回复，请检查Bot配置和Workflow设置');
                 }
             } catch (error) {
                 console.error('API调用错误:', error);
