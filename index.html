@@ -13,7 +13,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0a23 0%, #1a1a4d 25%, #2d2d6b 50%, #1a1a4d 75%, #0a0a23 100%);
+            background: linear-gradient(135deg, #000814 0%, #001d3d 25%, #003566 50%, #001d3d 75%, #000814 100%);
             min-height: 100vh;
             color: white;
             overflow-x: hidden;
@@ -310,41 +310,42 @@
         .header {
             text-align: center;
             padding: 40px 0;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
             margin-bottom: 30px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
             animation: slideDown 0.8s ease-out;
             position: relative;
         }
 
         .header h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: white;
-            margin-bottom: 10px;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
         }
 
         .header p {
-            font-size: 1.2rem;
-            color: white;
-            opacity: 0.9;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
         }
 
         .settings-btn {
-            position: absolute;
+            position: fixed;
             top: 20px;
             right: 20px;
-            padding: 10px 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            color: white;
+            padding: 8px 12px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 6px;
+            color: rgba(255, 255, 255, 0.9);
             cursor: pointer;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            font-size: 13px;
+            font-weight: 300;
+            transition: all 0.2s ease;
+            z-index: 1000;
         }
 
         .settings-btn:hover {
@@ -356,32 +357,28 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 20px;
-            padding: 30px;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            padding: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
             animation: slideUp 0.8s ease-out;
         }
 
         .settings-container {
             flex: 1;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 20px;
-            padding: 30px;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 8px;
+            padding: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
             animation: slideUp 0.8s ease-out;
         }
 
         .api-config {
-            background: rgba(30, 58, 138, 0.2);
-            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
             padding: 20px;
-            margin-bottom: 30px;
-            border: 1px solid rgba(59, 130, 246, 0.3);
+            margin-bottom: 24px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
         }
 
         .config-row {
@@ -400,25 +397,27 @@
 
         .config-row input {
             flex: 1;
-            padding: 12px 16px;
+            padding: 10px 12px;
             border: none;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.3);
             color: white;
             font-size: 14px;
-            transition: all 0.3s ease;
+            font-weight: 400;
+            transition: all 0.2s ease;
             min-width: 200px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .config-row input:focus {
             outline: none;
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-            transform: scale(1.02);
+            background: rgba(0, 0, 0, 0.4);
+            border-color: rgba(59, 130, 246, 0.4);
         }
 
         .config-row input::placeholder {
-            color: #9ca3af;
+            color: rgba(255, 255, 255, 0.4);
+            font-weight: 300;
         }
 
         .back-btn {
@@ -479,9 +478,9 @@
         .messages {
             flex: 1;
             overflow-y: auto;
-            padding: 20px 0;
+            padding: 15px 0;
             max-height: 400px;
-            margin-bottom: 20px;
+            margin-bottom: 0;
         }
 
         .message {
@@ -500,77 +499,79 @@
         .message-content {
             display: inline-block;
             max-width: 70%;
-            padding: 15px 20px;
-            border-radius: 20px;
+            padding: 12px 16px;
+            border-radius: 6px;
             font-size: 14px;
-            line-height: 1.5;
+            line-height: 1.4;
             word-wrap: break-word;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            font-weight: 400;
         }
 
         .user .message-content {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: rgba(0, 0, 0, 0.2);
             color: white;
-            border-bottom-right-radius: 5px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
         }
 
         .assistant .message-content {
-            background: rgba(255, 255, 255, 0.1);
-            color: #e2e8f0;
+            background: rgba(0, 0, 0, 0.3);
+            color: rgba(255, 255, 255, 0.95);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-bottom-left-radius: 5px;
         }
 
         .input-container {
             display: flex;
             gap: 15px;
             align-items: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .message-input {
             flex: 1;
-            padding: 15px 20px;
+            padding: 12px 16px;
             border: none;
-            border-radius: 25px;
-            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            background: rgba(0, 0, 0, 0.3);
             color: white;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            font-size: 14px;
+            font-weight: 400;
+            transition: all 0.2s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .message-input:focus {
             outline: none;
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
-            transform: scale(1.02);
+            background: rgba(0, 0, 0, 0.4);
+            border-color: rgba(59, 130, 246, 0.4);
         }
 
         .message-input::placeholder {
-            color: #9ca3af;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 300;
         }
 
         .send-btn {
-            padding: 15px 25px;
+            padding: 12px 20px;
             border: none;
-            border-radius: 25px;
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 6px;
+            background: rgba(59, 130, 246, 0.8);
             color: white;
-            font-size: 16px;
-            font-weight: 600;
+            font-size: 14px;
+            font-weight: 400;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+            transition: all 0.2s ease;
+            border: 1px solid rgba(59, 130, 246, 0.3);
         }
 
         .send-btn:hover {
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 8px 25px rgba(79, 172, 254, 0.4);
+            background: rgba(59, 130, 246, 1);
+            transform: translateY(-1px);
         }
 
         .send-btn:disabled {
-            opacity: 0.6;
+            opacity: 0.5;
             cursor: not-allowed;
             transform: none;
         }
@@ -942,10 +943,10 @@
                 <div class="messages" id="messages">
                     <div class="message assistant">
                         <div class="message-content">
-                            亲，为了帮你拿到最适合你行业的IP账号定位方案，我们需要先了解你这边的基本情况～<br><br>
-                            请你按照以下8个问题顺序填写，回答的答案可能有点长，需要您耐心地回答。<br><br>
-                            回答的越细节 得到的定位会更准确<br><br>
-                            如果你准备好了 回复一个 OK
+                            为了帮您制定更适合您行业的IP账号定位方案，我们需要先了解一些您的基本情况。<br><br>
+                            请根据以下8个问题依次进行填写，问题可能稍多一些，还请您耐心作答。<br><br>
+                            您的回答越详细，我们给出的定位建议就越精准。<br><br>
+                            如果您已准备好，请回复"OK"。
                         </div>
                     </div>
                 </div>
@@ -1325,13 +1326,13 @@
             currentQuestionIndex = 0;
             
             // 重新添加初始消息
-            addMessage('assistant', `亲，为了帮你拿到最适合你行业的IP账号定位方案，我们需要先了解你这边的基本情况～
+            addMessage('assistant', `为了帮您制定更适合您行业的IP账号定位方案，我们需要先了解一些您的基本情况。
 
-请你按照以下8个问题顺序填写，回答的答案可能有点长，需要您耐心地回答。
+请根据以下8个问题依次进行填写，问题可能稍多一些，还请您耐心作答。
 
-回答的越细节 得到的定位会更准确
+您的回答越详细，我们给出的定位建议就越精准。
 
-如果你准备好了 回复一个 OK`);
+如果您已准备好，请回复"OK"。`);
         }
 
         // 键盘快捷键
